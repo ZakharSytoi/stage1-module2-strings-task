@@ -26,8 +26,8 @@ public class StringSplitter {
             tmpString = sb.toString();
         }
         StringBuilder sb = new StringBuilder(tmpString);
-        if(sb.charAt(0) == ' ') sb.deleteCharAt(0);
-        for (int i = 0; i < sb.length() - 1; i++) {
+        while(sb.charAt(0) == ' ') sb.deleteCharAt(0);
+        for (int i = 0; i < sb.length() - 2; i++) {
             while (sb.charAt(i) == ' ' && sb.charAt(i + 1) == ' ') {
                 sb.deleteCharAt(i + 1);
             }
